@@ -55,13 +55,13 @@ const Hero = () => {
         >
           <a
             href="#projects"
-            className="px-8 py-3 rounded-full bg-pastel-text text-white font-medium hover:bg-black transition-colors shadow-lg hover:shadow-xl"
+            className="px-8 py-3 rounded-full bg-brand-primary text-white font-medium transition-all shadow-lg hover:brightness-110 hover:shadow-xl"
           >
             View Projects
           </a>
           <a
             href="#contact"
-            className="px-8 py-3 rounded-full bg-white text-pastel-text font-medium border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-colors"
+            className="px-8 py-3 rounded-full bg-brand-card text-brand-text font-medium border border-black/8 transition-colors hover:border-brand-primary/30 hover:text-brand-primary dark:border-white/10"
           >
             Contact Me
           </a>

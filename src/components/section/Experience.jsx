@@ -25,29 +25,29 @@ const Experience = () => {
         Experience
       </h2>
 
-      <div className="max-w-3xl mx-auto space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-linear-to-b before:from-transparent before:via-gray-200 before:to-transparent">
+      <div className="relative mx-auto max-w-3xl space-y-8 before:absolute before:inset-0 before:ml-5 before:h-full before:w-0.5 before:-translate-x-px before:bg-linear-to-b before:from-transparent before:via-black/10 before:to-transparent dark:before:via-white/12 md:before:mx-auto md:before:translate-x-0">
         {expData.map((exp, index) => (
           <div
             key={index}
             className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active"
           >
-            <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-pastel-blue text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-4 border-brand-bg bg-brand-primary text-white shadow md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
               <Briefcase size={16} />
             </div>
 
-            <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
-                <h3 className="font-bold text-pastel-text text-lg">
+            <div className="w-[calc(100%-4rem)] rounded-2xl border border-black/8 bg-brand-card p-6 shadow-sm transition-shadow hover:shadow-md dark:border-white/10 md:w-[calc(50%-2.5rem)]">
+              <div className="mb-2 flex flex-col justify-between md:flex-row md:items-center">
+                <h3 className="text-lg font-bold text-brand-text">
                   {exp.role}
                 </h3>
-                <span className="text-sm font-medium text-blue-400">
+                <span className="text-sm font-medium text-brand-primary">
                   {exp.duration}
                 </span>
               </div>
-              <h4 className="text-pastel-muted font-medium mb-3">
+              <h4 className="mb-3 font-medium text-brand-muted">
                 {exp.company}
               </h4>
-              <p className="text-sm text-pastel-muted leading-relaxed">
+              <p className="text-sm leading-relaxed text-brand-muted">
                 {exp.description}
               </p>
             </div>

@@ -4,6 +4,17 @@ import { ExternalLink } from "lucide-react";
 
 const projectsData = [
   {
+    title: "CYBERVISION",
+    description:
+      "An AI-assisted automated web penetration testing system designed for vulnerability detection and forensic data validation. Features automated SQLi and XSS scanning with detailed reporting.",
+    tech: ["Python", "MERN Stack", "AI Orchestration", "Cybersecurity"],
+    image:
+      "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
+    github: "https://github.com/AyubKureshi/cyberV",
+    live: "#",
+    featured: true,
+  },
+  {
     title: "Campus Connect",
     description:
       "A collaborative platform for university students to showcase academic projects, find teammates, and communicate in real-time.",
@@ -56,10 +67,10 @@ const Projects = () => {
         {projectsData.map((project, index) => (
           <motion.div
             key={index}
-            className="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 group flex flex-col h-full"
+            className="bg-brand-card rounded-3xl overflow-hidden shadow-sm border border-black/8 hover:shadow-xl transition-all duration-300 group flex flex-col h-full dark:border-white/10"
           >
             {/* Image Container with Hover Scale */}
-            <div className="w-full h-56 overflow-hidden bg-gray-100">
+            <div className="w-full h-56 overflow-hidden bg-brand-bg">
               <img
                 src={project.image}
                 alt={project.title}
@@ -69,20 +80,17 @@ const Projects = () => {
 
             {/* Content Container */}
             <div className="p-6 md:p-8 flex flex-col grow">
-              <h3 className="text-xl md:text-2xl font-semibold mb-3 text-pastel-text group-hover:text-blue-500 transition-colors">
+              <h3 className="text-xl md:text-2xl font-semibold mb-3 text-brand-text group-hover:text-brand-primary transition-colors">
                 {project.title}
               </h3>
-
-              <p className="text-pastel-muted mb-6 grow text-sm md:text-base leading-relaxed">
+              <p className="text-brand-muted mb-6 grow text-sm md:text-base leading-relaxed">
                 {project.description}
               </p>
-
-              {/* Tech Stack Tags */}
               <div className="flex flex-wrap gap-2 mb-8">
                 {project.tech.map((tech, i) => (
                   <span
                     key={i}
-                    className="text-xs font-semibold px-3 py-1.5 bg-pastel-lavender/40 text-pastel-text rounded-full"
+                    className="text-xs font-semibold px-3 py-1.5 bg-brand-primary/10 text-brand-primary rounded-full"
                   >
                     {tech}
                   </span>
@@ -90,10 +98,10 @@ const Projects = () => {
               </div>
 
               {/* Links */}
-              <div className="flex gap-6 pt-5 border-t border-gray-50 mt-auto">
+              <div className="flex gap-6 pt-5 mt-auto border-t border-black/8 dark:border-white/10">
                 <a
                   href={project.github}
-                  className="flex items-center text-sm font-semibold text-pastel-muted hover:text-black transition-colors"
+                  className="flex items-center text-sm font-semibold text-brand-muted hover:text-brand-text transition-colors"
                 >
                   <svg
                     viewBox="0 0 24 24"
@@ -106,7 +114,7 @@ const Projects = () => {
                 </a>
                 <a
                   href={project.live}
-                  className="flex items-center text-sm font-semibold text-pastel-muted hover:text-blue-500 transition-colors"
+                  className="flex items-center text-sm font-semibold text-brand-muted hover:text-brand-primary transition-colors"
                 >
                   <ExternalLink size={18} className="mr-2" /> Live Demo
                 </a>

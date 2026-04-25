@@ -2,8 +2,43 @@
 @import "tailwindcss";
 @config "../tailwind.config.js";
 
-html {
-  scroll-behavior: smooth;
-  background-color: #FAF9F6;
-  color: #2D3748;
+@layer base {
+  :root {
+    --color-primary: #4f46e5;
+    /* Indigo */
+    --color-secondary: #10b981;
+    /* Emerald */
+    --color-accent: #f43f5e;
+    /* Rose */
+    --color-bg: #ffffff;
+    --color-card: #f8fafc;
+    --color-text: #1e293b;
+    --color-muted: #64748b;
+  }
+
+  .dark {
+    --color-primary: #818cf8;
+    --color-secondary: #34d399;
+    --color-accent: #fb7185;
+    --color-bg: #0f172a;
+    /* Slate 950 */
+    --color-card: #1e293b;
+    /* Slate 800 */
+    --color-text: #f1f5f9;
+    --color-muted: #94a3b8;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+    body {
+      @apply bg-brand-bg text-brand-text transition-colors duration-300 ease-in-out;
+    }
+  
+    *,
+    ::before,
+    ::after {
+      @apply transition-colors duration-300;
+    }
 }

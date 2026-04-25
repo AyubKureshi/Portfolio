@@ -102,24 +102,24 @@ const Contact = () => {
           <div className="space-y-4">
             <a
               href={`mailto:${CONTACT_EMAIL}`}
-              className="flex items-center gap-4 text-pastel-muted transition-colors hover:text-blue-500"
+              className="flex items-center gap-4 text-pastel-muted transition-colors hover:text-brand-primary"
             >
-              <div className="rounded-full border border-gray-100 bg-white p-3 shadow-sm">
+              <div className="rounded-full border border-black/8 bg-brand-card p-3 text-brand-text shadow-sm dark:border-white/10">
                 <Mail size={20} />
               </div>
               <span>{CONTACT_EMAIL}</span>
             </a>
             <a
               href={`tel:${CONTACT_PHONE}`}
-              className="flex items-center gap-4 text-pastel-muted transition-colors hover:text-blue-500"
+              className="flex items-center gap-4 text-pastel-muted transition-colors hover:text-brand-primary"
             >
-              <div className="rounded-full border border-gray-100 bg-white p-3 shadow-sm">
+              <div className="rounded-full border border-black/8 bg-brand-card p-3 text-brand-text shadow-sm dark:border-white/10">
                 <Phone size={20} />
               </div>
               <span>+91-9322128872</span>
             </a>
             <div className="flex items-center gap-4 text-pastel-muted">
-              <div className="rounded-full border border-gray-100 bg-white p-3 shadow-sm">
+              <div className="rounded-full border border-black/8 bg-brand-card p-3 text-brand-text shadow-sm dark:border-white/10">
                 <MapPin size={20} />
               </div>
               <span>Pune, Maharashtra</span>
@@ -135,7 +135,7 @@ const Contact = () => {
                 title={link.name}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-full border border-gray-100 bg-white p-3 text-pastel-text shadow-sm transition-all hover:bg-pastel-text hover:text-white"
+                className="rounded-full border border-black/8 bg-brand-card p-3 text-brand-text shadow-sm transition-all hover:bg-brand-primary hover:text-white dark:border-white/10"
               >
                 {link.icon}
               </a>
@@ -144,7 +144,7 @@ const Contact = () => {
         </div>
 
         <form
-          className="space-y-6 rounded-3xl border border-gray-100 bg-white p-8 shadow-sm"
+          className="space-y-6 rounded-3xl border border-black/8 bg-brand-card p-8 shadow-sm dark:border-white/10"
           onSubmit={handleSubmit}
         >
           <div className="space-y-2">
@@ -158,7 +158,7 @@ const Contact = () => {
               value={formData.name}
               onChange={handleChange}
               placeholder="John Doe"
-              className="w-full rounded-xl border-transparent bg-gray-50 px-4 py-3 text-pastel-text outline-none transition-all focus:border-blue-200 focus:bg-white focus:ring-2 focus:ring-blue-100"
+              className="w-full rounded-xl border border-transparent bg-brand-bg px-4 py-3 text-brand-text outline-none transition-all placeholder:text-brand-muted/80 focus:border-brand-primary/30 focus:ring-2 focus:ring-brand-primary/20"
             />
           </div>
           <div className="space-y-2">
@@ -173,7 +173,7 @@ const Contact = () => {
               onChange={handleChange}
               placeholder="john@example.com"
               required
-              className="w-full rounded-xl border-transparent bg-gray-50 px-4 py-3 text-pastel-text outline-none transition-all focus:border-blue-200 focus:bg-white focus:ring-2 focus:ring-blue-100"
+              className="w-full rounded-xl border border-transparent bg-brand-bg px-4 py-3 text-brand-text outline-none transition-all placeholder:text-brand-muted/80 focus:border-brand-primary/30 focus:ring-2 focus:ring-brand-primary/20"
             />
           </div>
           <div className="space-y-2">
@@ -188,17 +188,17 @@ const Contact = () => {
               onChange={handleChange}
               placeholder="How can I help you?"
               required
-              className="w-full resize-none rounded-xl border-transparent bg-gray-50 px-4 py-3 text-pastel-text outline-none transition-all focus:border-blue-200 focus:bg-white focus:ring-2 focus:ring-blue-100"
+              className="w-full resize-none rounded-xl border border-transparent bg-brand-bg px-4 py-3 text-brand-text outline-none transition-all placeholder:text-brand-muted/80 focus:border-brand-primary/30 focus:ring-2 focus:ring-brand-primary/20"
             />
           </div>
-          <button className="flex w-full items-center justify-center gap-2 rounded-xl bg-pastel-text py-4 font-medium text-white shadow-md transition-colors hover:bg-black">
+          <button className="flex w-full items-center justify-center gap-2 rounded-xl bg-brand-primary py-4 font-medium text-white shadow-md transition-colors hover:brightness-110">
             <Send size={18} />
             Send Message
           </button>
           <button
             type="button"
             onClick={handleSmsClick}
-            className="flex w-full items-center justify-center gap-2 rounded-xl border border-gray-200 bg-white py-4 font-medium text-pastel-text transition-colors hover:border-blue-200 hover:text-blue-500"
+            className="flex w-full items-center justify-center gap-2 rounded-xl border border-black/8 bg-brand-bg py-4 font-medium text-brand-text transition-colors hover:border-brand-primary/30 hover:text-brand-primary dark:border-white/10"
           >
             <MessageSquare size={18} />
             Send Text Message

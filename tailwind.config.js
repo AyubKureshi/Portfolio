@@ -4,22 +4,32 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
+        brand: {
+          primary: "var(--color-primary)",
+          secondary: "var(--color-secondary)",
+          accent: "var(--color-accent)",
+          bg: "var(--color-bg)",
+          card: "var(--color-card)",
+          text: "var(--color-text)",
+          muted: "var(--color-muted)",
+        },
         pastel: {
-          bg: '#FAF9F6',      // Off-white base
-          lavender: '#E9E4F0', // Soft lavender
-          mint: '#E2F0CB',     // Mint green
-          blue: '#D4E4F7',     // Soft blue
-          text: '#2D3748',     // Smooth dark grey for readability
-          muted: '#718096'     // Muted text
-        }
+          bg: "var(--color-bg)",
+          text: "var(--color-text)",
+          muted: "var(--color-muted)",
+          blue: "#60a5fa",
+          lavender: "#c4b5fd",
+          mint: "#6ee7b7",
+        },
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ["Inter", "sans-serif"],
       },
     },
   },
   plugins: [],
-}
+};

@@ -49,16 +49,16 @@ const About = () => {
           ].map((item, index) => (
             <div
               key={index}
-              className="flex items-start gap-4 p-5 rounded-2xl bg-white border border-gray-100 shadow-sm"
+              className="flex items-start gap-4 rounded-2xl border border-black/8 bg-brand-card p-5 shadow-sm dark:border-white/10"
             >
-              <div className="p-3 bg-pastel-lavender/50 text-pastel-text rounded-xl">
+              <div className="rounded-xl bg-brand-primary/12 p-3 text-brand-primary">
                 {item.icon}
               </div>
               <div>
-                <h3 className="font-semibold text-pastel-text mb-1">
+                <h3 className="mb-1 font-semibold text-brand-text">
                   {item.title}
                 </h3>
-                <p className="text-sm text-pastel-muted">{item.desc}</p>
+                <p className="text-sm text-brand-muted">{item.desc}</p>
               </div>
             </div>
           ))}
